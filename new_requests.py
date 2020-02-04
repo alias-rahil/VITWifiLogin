@@ -11,7 +11,7 @@ post_data = {
     "Submit22": "Login"
 }
 r = requests.post(req_url, data = post_data)
-if "logged" in r.content:
+if "logged" in str(r.content):
     print("Succesfully logged in!")
 else:
     print("Something went wrong!")
